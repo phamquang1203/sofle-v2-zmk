@@ -1,9 +1,68 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', DELETE, ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT,
-    Z, X, C, V, B, MUTE, '', N, M, ',', ., /, RSHFT, LGUI, LALT, LCTRL, lower, RET, SPACE, raise, RCTRL, RALT, RGUI]
+  default:
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - \
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - BSPC
+  - TAB
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - LSHFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: lower, h: toggle}
+  - MUTE
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - '['
+  - LGUI
+  - LALT
+  - LCTRL
+  - SPACE
+  - lower
+  - raise
+  - SPACE
+  - ENTER
+  - '-'
+  - DELETE
   lower:
-  - '&studio_unlock'
+  - {t: ▽, type: trans}
   - F1
   - F2
   - F3
@@ -45,19 +104,19 @@ layers:
   - KP PLUS
   - '{'
   - '}'
-  - {t: ▽, type: trans}
+  - {t: raise, h: toggle}
   - {t: ▽, type: trans}
   - '['
   - ']'
   - ;
   - ':'
   - \
+  - '}'
   - {t: ▽, type: trans}
-  - '&studio_unlock'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -80,7 +139,7 @@ layers:
   - INS
   - PSCRN
   - CMENU
-  - {t: ▽, type: trans}
+  - HOME
   - {t: ▽, type: trans}
   - PG UP
   - {t: ▽, type: trans}
@@ -106,8 +165,7 @@ layers:
   - COPY
   - PASTE
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: default, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -124,7 +182,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  adjust:
+  - {t: ▽, type: trans}
+  Adjust:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -149,7 +208,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - '&studio_unlock'
   - RGB BRD
   - RGB BRI
   - ''
@@ -162,7 +221,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - '&soft_off'
   - ''
   - ''
   - ''
@@ -178,10 +237,10 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
-  - ''
   - ''
   - {type: held}
+  - {type: held}
+  - ''
   - ''
   - ''
   - ''
